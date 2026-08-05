@@ -1,0 +1,64 @@
+/* ==========================================================
+   DESIGN TOKENS — Paleta de marca y variables globales
+   TEMA CLARO (Blanco) con acentos rojos de marca
+   ========================================================== */
+:root {
+  /* --- Colores de marca --- */
+  --color-primary: #FC3441;
+  --color-primary-hover: #fc2414;
+  --color-primary-700: #CF0102;
+  --color-primary-light: #FFE7E9;
+  --color-primary-glow: rgba(252, 52, 65, 0.2);
+
+  /* --- Fondos (TEMA BLANCO) --- */
+  --bg-body: #ffffff;
+  --bg-section-alt: #f5f6f8;
+  --bg-card: #ffffff;
+  --bg-glass: rgba(0, 0, 0, 0.02);
+  --bg-input: #f5f6f8;
+
+  /* --- Textos --- */
+  --text-primary: #0f1117;
+  --text-secondary: #52556a;
+  --text-muted: #9396a8;
+  --text-dark: #383838;
+
+  /* --- Bordes y sombras --- */
+  --border-color: rgba(0, 0, 0, 0.08);
+  --border-active: rgba(252, 52, 65, 0.35);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 4px 28px var(--color-primary-glow);
+
+  /* --- Gradientes --- */
+  --gradient-primary: linear-gradient(135deg, #FC3441 0%, #fc2414 100%);
+  --gradient-dark: linear-gradient(135deg, #CF0102 0%, #FC3441 100%);
+  --gradient-soft: linear-gradient(180deg, #ffffff 0%, #f5f6f8 100%);
+
+  /* --- Radios --- */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 50px;
+
+  /* --- Tipografía --- */
+  --font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.85rem;
+  --font-size-base: 0.95rem;
+  --font-size-md: 1.05rem;
+  --font-size-lg: 1.15rem;
+  --font-size-xl: 1.5rem;
+
+  /* --- Transiciones --- */
+  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 0.2s var(--ease-out);
+  --transition-base: 0.3s var(--ease-out);
+  --transition-slow: 0.5s var(--ease-out);
+
+  /* --- Layout --- */
+  --container-max: 1200px;
+  --section-padding: 100px;
+  --navbar-height: 72px;
+}

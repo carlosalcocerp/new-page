@@ -1,0 +1,24 @@
+/* ==========================================================
+   MAIN.CSS — Punto de entrada que importa todos los estilos
+   Orden: variables → reset → componentes → secciones → utils
+   ========================================================== */
+
+/* 1. Base */
+@import url('./base/variables.css');
+@import url('./base/reset.css');
+
+/* 2. Componentes reutilizables */
+@import url('./components/buttons.css');
+@import url('./components/cards.css');
+@import url('./components/navbar.css');
+@import url('./components/footer.css');
+
+/* 3. Secciones específicas */
+@import url('./sections/hero.css');
+@import url('./sections/content.css');
+@import url('./sections/features.css');
+@import url('./sections/social.css');
+
+/* 4. Utilidades */
+@import url('./utilities/animations.css');
+@import url('./utilities/responsive.css');

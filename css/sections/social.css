@@ -1,0 +1,204 @@
+/* ==========================================================
+   SUPPORT — Sección de soporte (Tema Blanco)
+   ========================================================== */
+.support {
+  background: var(--bg-section-alt);
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.sup-icon {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+
+/* ==========================================================
+   TESTIMONIALS (Tema Blanco)
+   ========================================================== */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+}
+
+.testimonial-card .stars {
+  color: #ffc107;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.testimonial-card blockquote {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.author-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.author-role {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+/* ==========================================================
+   FAQ (Tema Blanco)
+   ========================================================== */
+.faq {
+  background: var(--bg-section-alt);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: var(--transition-base);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-item.active {
+  border-color: var(--border-active);
+  box-shadow: 0 4px 20px rgba(252, 52, 65, 0.08);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 22px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-toggle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-base);
+  flex-shrink: 0;
+  margin-left: 16px;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+}
+
+.faq-item.active .faq-toggle {
+  transform: rotate(45deg);
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+  padding: 0 28px 22px;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+/* ==========================================================
+   CTA FINAL (Tema Blanco — con fondo oscuro para contraste)
+   ========================================================== */
+.cta-final {
+  text-align: center;
+  padding: var(--section-padding) 0;
+  background: #0f1117;
+  color: #ffffff;
+  position: relative;
+}
+
+.cta-final::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(252, 52, 65, 0.1) 0%, transparent 70%);
+}
+
+.cta-final .section-label {
+  color: var(--color-primary);
+}
+
+.cta-final h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.cta-final p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: var(--font-size-md);
+  margin-bottom: 36px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}

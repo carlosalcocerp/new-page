@@ -1,0 +1,76 @@
+/* ==========================================================
+   CARDS — Estilos reutilizables para tarjetas (Tema Blanco)
+   ========================================================== */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 36px;
+  transition: var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-active);
+  box-shadow: var(--shadow-lg);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: var(--transition-base);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* --- Card Icon --- */
+.card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  font-size: 1.6rem;
+}
+
+.card-icon--red    { background: var(--color-primary-light); }
+.card-icon--blue   { background: #e8f0fe; }
+.card-icon--purple { background: #f0ebff; }
+.card-icon--orange { background: #fff3e0; }
+.card-icon--pink   { background: #fce4ec; }
+.card-icon--green  { background: #e8f5e9; }
+
+.card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.card p {
+  color: var(--text-secondary);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+/* --- Card centrada (para steps, support) --- */
+.card--centered {
+  text-align: center;
+}
+
+.card--centered .card-icon {
+  margin: 0 auto 24px;
+}

@@ -1,0 +1,195 @@
+/* ==========================================================
+   TECH — Sección de tecnología (Tema Blanco)
+   ========================================================== */
+.tech-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.tech-tag {
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  background: var(--bg-section-alt);
+  border: 1px solid var(--border-color);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: var(--transition-base);
+}
+
+.tech-tag:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.tech-visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.tech-metric {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  text-align: center;
+  transition: var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.tech-metric:hover {
+  border-color: var(--border-active);
+  box-shadow: var(--shadow-md);
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.metric-label {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ==========================================================
+   PAYMENTS — Sección de pagos locales (Tema Blanco)
+   ========================================================== */
+.payments {
+  background: var(--bg-section-alt);
+}
+
+.payments-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.payment-methods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.payment-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  text-align: center;
+  transition: var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.payment-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-active);
+  box-shadow: var(--shadow-md);
+}
+
+.pay-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.payment-card h4 {
+  font-size: var(--font-size-base);
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.payment-card p {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+/* ==========================================================
+   ROI CALCULATOR (Tema Blanco)
+   ========================================================== */
+.calculator-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 48px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-md);
+}
+
+.calc-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.calc-group label {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.calc-group input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: var(--transition-base);
+}
+
+.calc-group input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(252, 52, 65, 0.1);
+}
+
+.calc-results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-color);
+}
+
+.calc-result {
+  text-align: center;
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-light);
+  border: 1px solid rgba(252, 52, 65, 0.12);
+}
+
+.result-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.result-label {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
