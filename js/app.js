@@ -7,6 +7,8 @@ import { initRevealAnimations, initCounterAnimation } from './modules/animations
 import { initFAQ } from './modules/faq.js';
 import { initCalculator } from './modules/calculator.js';
 import { initSmoothScroll } from './modules/smooth-scroll.js';
+import { initColorCustomizer } from './modules/color-customizer.js';
+import { initPhoneCarousel } from './modules/phone-carousel.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
@@ -15,4 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initFAQ();
   initCalculator();
   initSmoothScroll();
+  initColorCustomizer();
+  initPhoneCarousel();
 });

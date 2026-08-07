@@ -1,0 +1,684 @@
+/* ==========================================================
+   PHONE CAROUSEL — Mockups de teléfono con carrusel rotativo
+   Todos los colores de acento usan --color-primary
+   ========================================================== */
+
+/* --- Contenedor del carrusel --- */
+.phone-carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 520px;
+}
+
+/* --- Frame del teléfono --- */
+.phone-frame {
+  width: 280px;
+  height: 560px;
+  background: #ffffff;
+  border-radius: 40px;
+  border: 3px solid #d1d5db;
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(0,0,0,0.04),
+    inset 0 0 0 1px rgba(255,255,255,0.8);
+  overflow: hidden;
+  position: relative;
+  animation: hero-float 6s ease-in-out infinite;
+}
+
+/* Notch del teléfono */
+.phone-frame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 28px;
+  background: #1a1a1a;
+  border-radius: 0 0 20px 20px;
+  z-index: 20;
+}
+
+/* Barra de estado */
+.phone-frame::after {
+  content: '10:09';
+  position: absolute;
+  top: 5px;
+  left: 24px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #1a1a1a;
+  z-index: 21;
+  font-family: var(--font-family);
+}
+
+/* --- Slides del carrusel --- */
+.phone-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.phone-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+.phone-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+/* --- Dots de navegación --- */
+.carousel-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 24px;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: var(--border-color);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  padding: 0;
+}
+
+.carousel-dot.active {
+  background: var(--color-primary);
+  transform: scale(1.2);
+  box-shadow: 0 0 8px var(--color-primary-glow);
+}
+
+.carousel-dot:hover {
+  background: var(--color-primary);
+  opacity: 0.7;
+}
+
+/* ====================================
+   PANTALLAS DE LA APP (Mockups HTML/CSS)
+   ==================================== */
+
+/* --- Shared screen base --- */
+.app-screen {
+  width: 100%;
+  height: 100%;
+  background: #f8f9fa;
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: 32px;
+}
+
+/* ==========================
+   SCREEN 1: Pasajero – Mapa
+   ========================== */
+.screen-passenger {
+  background: #ffffff;
+}
+
+.s-pass-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background: #fff;
+}
+
+.s-pass-header .hamburger {
+  font-size: 16px;
+  color: #333;
+}
+
+.s-pass-header .app-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.s-pass-header .app-name span {
+  color: var(--text-primary);
+}
+
+.s-pass-header .user-greeting {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* Mapa placeholder */
+.s-map-area {
+  flex: 1;
+  background:
+    linear-gradient(135deg, #e8edf2 25%, transparent 25%) -10px 0,
+    linear-gradient(225deg, #e8edf2 25%, transparent 25%) -10px 0,
+    linear-gradient(315deg, #e8edf2 25%, transparent 25%),
+    linear-gradient(45deg, #e8edf2 25%, transparent 25%);
+  background-size: 20px 20px;
+  background-color: #eef1f5;
+  position: relative;
+  min-height: 200px;
+}
+
+.s-map-area .map-route-line {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 60%;
+  height: 40%;
+  border: 3px solid #8bc34a;
+  border-radius: 0 30px 0 0;
+  border-left: none;
+  border-bottom: none;
+}
+
+.s-map-area .map-pin-origin {
+  position: absolute;
+  bottom: 30%;
+  left: 20%;
+  width: 12px;
+  height: 12px;
+  background: #333;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.15);
+}
+
+.s-map-area .map-pin-dest {
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  width: 12px;
+  height: 12px;
+  background: #4caf50;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(76,175,80,0.2);
+}
+
+.s-map-area .promo-banner {
+  position: absolute;
+  bottom: 8px;
+  left: 12px;
+  right: 12px;
+  background: #ffc107;
+  color: #333;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Category tabs */
+.s-category-tabs {
+  display: flex;
+  gap: 2px;
+  padding: 8px 12px 4px;
+  background: #fff;
+}
+
+.s-cat-tab {
+  flex: 1;
+  text-align: center;
+  padding: 6px 4px;
+  border-radius: 8px;
+  font-size: 8px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: #f5f5f5;
+  transition: var(--transition-fast);
+}
+
+.s-cat-tab.active {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+/* Address bar */
+.s-address-bar {
+  padding: 8px 16px;
+  background: #fff;
+}
+
+.s-address-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 9px;
+  color: var(--text-secondary);
+}
+
+.s-address-item .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.s-address-item .dot.origin { background: #333; }
+.s-address-item .dot.dest { background: #4caf50; }
+
+/* Price bar */
+.s-price-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background: #fff;
+}
+
+.s-price-bar .price {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.s-price-bar .go-btn {
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 32px;
+  border-radius: 25px;
+  letter-spacing: 1px;
+}
+
+/* ==========================
+   SCREEN 2: Conductor – Lista
+   ========================== */
+.screen-driver-list {
+  background: #f5f6f8;
+}
+
+.s-driver-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background: #fff;
+}
+
+.s-driver-header .hamburger {
+  font-size: 14px;
+  color: var(--color-primary);
+}
+
+.s-driver-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: #f0f0f0;
+  padding: 4px 14px;
+  border-radius: 20px;
+}
+
+.s-driver-status .status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4caf50;
+}
+
+.s-ride-list {
+  flex: 1;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.s-ride-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid #f0f0f0;
+}
+
+.s-ride-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.s-ride-badges {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.s-ride-badge {
+  font-size: 7px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.s-ride-badge.now { background: #333; }
+.s-ride-badge.promo { background: var(--color-primary); }
+.s-ride-badge.dist { background: #e0e0e0; color: #555; }
+
+.s-ride-driver-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.s-ride-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ddd, #bbb);
+  flex-shrink: 0;
+}
+
+.s-ride-name {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.s-ride-rating {
+  font-size: 9px;
+  color: #f59e0b;
+}
+
+.s-ride-price {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-left: auto;
+}
+
+.s-ride-address {
+  font-size: 8px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 3px;
+}
+
+.s-ride-address .mini-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.s-ride-address .mini-dot.o { background: #333; }
+.s-ride-address .mini-dot.d { background: #4caf50; }
+
+/* ==========================
+   SCREEN 3: Viaje en curso
+   ========================== */
+.screen-trip {
+  background: #fff;
+}
+
+.s-trip-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  background: #fff;
+}
+
+.s-trip-header .close-icon {
+  color: var(--color-primary);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.s-trip-header .trip-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.s-trip-header .car-icon {
+  margin-left: auto;
+  font-size: 20px;
+}
+
+.s-trip-map {
+  flex: 1;
+  background:
+    linear-gradient(135deg, #e8edf2 25%, transparent 25%) -10px 0,
+    linear-gradient(225deg, #e8edf2 25%, transparent 25%) -10px 0,
+    linear-gradient(315deg, #e8edf2 25%, transparent 25%),
+    linear-gradient(45deg, #e8edf2 25%, transparent 25%);
+  background-size: 20px 20px;
+  background-color: #eef1f5;
+  position: relative;
+  min-height: 200px;
+}
+
+.s-trip-map .driver-pin {
+  position: absolute;
+  top: 55%;
+  left: 35%;
+  width: 24px;
+  height: 24px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px var(--color-primary-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.s-trip-map .driver-pin::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.s-trip-map .nav-btn {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: #333;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.s-trip-driver-card {
+  padding: 12px 16px;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+}
+
+.s-trip-driver-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.s-trip-driver-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ddd, #bbb);
+  flex-shrink: 0;
+}
+
+.s-trip-driver-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.s-trip-driver-price {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.s-trip-driver-rating {
+  margin-left: auto;
+  font-size: 10px;
+  color: #f59e0b;
+}
+
+.s-trip-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.s-trip-action-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.s-end-trip-btn {
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.s-trip-addresses {
+  padding: 8px 16px 12px;
+  background: #fff;
+}
+
+.s-trip-address-item {
+  font-size: 8px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 0;
+}
+
+/* ==========================
+   SCREEN 4: Menú Conductor
+   ========================== */
+.screen-menu {
+  background: #fff;
+}
+
+.s-menu-profile {
+  padding: 28px 20px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.s-menu-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ccc, #999);
+  margin: 0 auto 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.s-menu-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.s-menu-stars {
+  color: #f59e0b;
+  font-size: 10px;
+  margin-bottom: 14px;
+  letter-spacing: 2px;
+}
+
+.s-menu-mode-btn {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 10px 28px;
+  border-radius: 25px;
+}
+
+.s-menu-list {
+  padding: 16px 0;
+}
+
+.s-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 24px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: var(--transition-fast);
+}
+
+.s-menu-item:hover {
+  background: var(--color-primary-light);
+}
+
+.s-menu-item .menu-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.s-menu-divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 4px 24px;
+}

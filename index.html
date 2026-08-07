@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RideFleet — Tu App de Taxis con Tu Marca | Plataforma SaaS de Marca Blanca</title>
+  <title>ViaGO — Tu App de Taxis con Tu Marca | Plataforma SaaS de Marca Blanca</title>
   <meta name="description" content="Lanza tu propia app de taxis personalizada con tu logo y marca. Sin desarrollo costoso, sin complicaciones técnicas. Modelo de alquiler mensual para flotas de radiotaxi.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="#" class="nav-logo"><span class="gradient-text">Ride</span>Fleet</a>
+      <a href="#" class="nav-logo"><span class="gradient-text">Via</span>GO</a>
       <ul class="nav-links">
         <li><a href="#beneficios">Beneficios</a></li>
         <li><a href="#caracteristicas">Características</a></li>
@@ -63,7 +63,180 @@
         </div>
       </div>
       <div class="hero-image">
-        <img src="assets/images/hero-phones.png" alt="App de pasajero y conductor mostrando mapa GPS y solicitud de viaje" width="480" height="480">
+        <div class="phone-carousel">
+          <div class="phone-frame">
+            <div class="phone-slides">
+
+              <!-- SLIDE 1: Pasajero – Mapa y solicitud de viaje -->
+              <div class="phone-slide active" data-slide="0">
+                <div class="app-screen screen-passenger">
+                  <div class="s-pass-header">
+                    <span class="hamburger">☰</span>
+                    <span class="user-greeting">Hola, Juan. Elige tu viaje.</span>
+                    <span>🚗</span>
+                  </div>
+                  <div class="s-map-area">
+                    <div class="map-route-line"></div>
+                    <div class="map-pin-origin"></div>
+                    <div class="map-pin-dest"></div>
+                    <div class="promo-banner">🎉 ¡Promoción disponible!</div>
+                  </div>
+                  <div class="s-category-tabs">
+                    <div class="s-cat-tab active">Eco Go</div>
+                    <div class="s-cat-tab">Go</div>
+                    <div class="s-cat-tab">Pro</div>
+                    <div class="s-cat-tab">Premium</div>
+                  </div>
+                  <div class="s-address-bar">
+                    <div class="s-address-item">
+                      <span class="dot origin"></span>
+                      Urba. San Isidro, Tiabaya, Arequipa
+                    </div>
+                    <div class="s-address-item">
+                      <span class="dot dest"></span>
+                      Prolongación Almete Miguel Grau 303...
+                    </div>
+                  </div>
+                  <div class="s-price-bar">
+                    <span class="price">S/. 14.00</span>
+                    <span class="go-btn">GO</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SLIDE 2: Conductor – Lista de solicitudes -->
+              <div class="phone-slide" data-slide="1">
+                <div class="app-screen screen-driver-list">
+                  <div class="s-driver-header">
+                    <span class="hamburger">☰</span>
+                    <div class="s-driver-status">
+                      Disponible <span class="status-dot"></span>
+                    </div>
+                  </div>
+                  <div class="s-ride-list">
+                    <!-- Ride card 1 -->
+                    <div class="s-ride-card">
+                      <div class="s-ride-card-header">
+                        <div class="s-ride-badges">
+                          <span class="s-ride-badge now">Justo Ahora</span>
+                          <span class="s-ride-badge promo">🎁 Promoción</span>
+                          <span class="s-ride-badge dist">300 metros</span>
+                        </div>
+                      </div>
+                      <div class="s-ride-driver-info">
+                        <div class="s-ride-avatar"></div>
+                        <div>
+                          <div class="s-ride-name">Gomozo <span class="s-ride-rating">★ 3.5(25)</span></div>
+                        </div>
+                        <div class="s-ride-price">S/11.50</div>
+                      </div>
+                      <div class="s-ride-address"><span class="mini-dot o"></span> Urb. San Isidro, Tiabaya</div>
+                      <div class="s-ride-address"><span class="mini-dot d"></span> Prolongación Almete Miguel...</div>
+                    </div>
+                    <!-- Ride card 2 -->
+                    <div class="s-ride-card">
+                      <div class="s-ride-card-header">
+                        <div class="s-ride-badges">
+                          <span class="s-ride-badge now">Justo Ahora</span>
+                          <span class="s-ride-badge dist">300 metros</span>
+                        </div>
+                      </div>
+                      <div class="s-ride-driver-info">
+                        <div class="s-ride-avatar"></div>
+                        <div>
+                          <div class="s-ride-name">Gomozo <span class="s-ride-rating">★ 3.5(25)</span></div>
+                        </div>
+                        <div class="s-ride-price">S/11.50</div>
+                      </div>
+                      <div class="s-ride-address"><span class="mini-dot o"></span> Urb. San Isidro, Tiabaya</div>
+                      <div class="s-ride-address"><span class="mini-dot d"></span> Prolongación Almete Miguel...</div>
+                    </div>
+                    <!-- Ride card 3 -->
+                    <div class="s-ride-card">
+                      <div class="s-ride-driver-info">
+                        <div class="s-ride-avatar"></div>
+                        <div>
+                          <div class="s-ride-name">Gomozo <span class="s-ride-rating">★ 3.5(25)</span></div>
+                          <div style="font-size:11px;font-weight:700;color:var(--color-primary)">S/11.50</div>
+                        </div>
+                        <div style="margin-left:auto;font-size:8px;color:var(--text-muted)">800metros / Ahora</div>
+                      </div>
+                      <div class="s-ride-address"><span class="mini-dot o"></span> Urb. San Isidro, Tiabaya</div>
+                      <div class="s-ride-address"><span class="mini-dot d"></span> Prolongación Almete Miguel...</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SLIDE 3: Viaje en curso -->
+              <div class="phone-slide" data-slide="2">
+                <div class="app-screen screen-trip">
+                  <div class="s-trip-header">
+                    <span class="close-icon">✕</span>
+                    <span class="trip-title">Empezando viaje</span>
+                    <span class="car-icon">🚙</span>
+                  </div>
+                  <div class="s-trip-map">
+                    <div class="driver-pin"></div>
+                    <div class="nav-btn">📍 Navegar</div>
+                  </div>
+                  <div class="s-trip-driver-card">
+                    <div class="s-trip-driver-row">
+                      <div class="s-trip-driver-avatar"></div>
+                      <div>
+                        <div class="s-trip-driver-name">Roko Gomozo</div>
+                        <div class="s-trip-driver-price">S/11.50</div>
+                      </div>
+                      <div class="s-trip-driver-rating">3.5 ★</div>
+                    </div>
+                    <div class="s-trip-actions">
+                      <div class="s-trip-action-btn">📞</div>
+                      <div class="s-trip-action-btn">💬</div>
+                      <div class="s-trip-action-btn">📋</div>
+                      <div class="s-trip-action-btn">📤</div>
+                    </div>
+                    <div class="s-end-trip-btn">⏹ Terminar viaje</div>
+                  </div>
+                  <div class="s-trip-addresses">
+                    <div class="s-trip-address-item"><span class="dot origin" style="width:5px;height:5px;"></span> Urb. San Isidro, Tiabaya, Arequipa</div>
+                    <div class="s-trip-address-item"><span class="dot dest" style="width:5px;height:5px;"></span> Prolongación Almete Miguel Grau 303</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SLIDE 4: Menú del conductor -->
+              <div class="phone-slide" data-slide="3">
+                <div class="app-screen screen-menu">
+                  <div class="s-menu-profile">
+                    <div class="s-menu-avatar"></div>
+                    <div class="s-menu-name">Juan Navarrete</div>
+                    <div class="s-menu-stars">★ ★ ★ ★ ☆</div>
+                    <div class="s-menu-mode-btn">Modo conductor</div>
+                  </div>
+                  <div class="s-menu-list">
+                    <div class="s-menu-item"><span class="menu-icon">👤</span> Perfil</div>
+                    <div class="s-menu-item"><span class="menu-icon">📋</span> Historial</div>
+                    <div class="s-menu-item"><span class="menu-icon">🎁</span> Promociones</div>
+                    <div class="s-menu-divider"></div>
+                    <div class="s-menu-item"><span class="menu-icon">📤</span> Compartir aplicación</div>
+                    <div class="s-menu-item"><span class="menu-icon">⭐</span> Calificar aplicación</div>
+                    <div class="s-menu-divider"></div>
+                    <div class="s-menu-item"><span class="menu-icon">🛟</span> Soporte</div>
+                    <div class="s-menu-item"><span class="menu-icon">🚪</span> Cerrar sesión</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- Dots de navegación -->
+          <div class="carousel-dots">
+            <button class="carousel-dot active" data-slide="0" aria-label="Pantalla 1"></button>
+            <button class="carousel-dot" data-slide="1" aria-label="Pantalla 2"></button>
+            <button class="carousel-dot" data-slide="2" aria-label="Pantalla 3"></button>
+            <button class="carousel-dot" data-slide="3" aria-label="Pantalla 4"></button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -317,6 +490,7 @@
   </section>
 
   <!-- ===== TESTIMONIOS ===== -->
+  <!-- Oculto a petición:
   <section class="testimonials" id="testimonios">
     <div class="container">
       <div class="section-header reveal">
@@ -360,6 +534,7 @@
       </div>
     </div>
   </section>
+  -->
 
   <!-- ===== FAQ ===== -->
   <section class="faq" id="faq">
@@ -405,7 +580,7 @@
       <p>Agenda una demostración gratuita y descubre cómo tu empresa de taxis puede competir con las grandes plataformas, pero con tu propia marca.</p>
       <div class="cta-buttons">
         <a href="https://wa.me/51999999999?text=Hola%2C%20quiero%20una%20demo%20de%20la%20app%20de%20taxis" class="btn btn-whatsapp" id="cta-final-whatsapp" target="_blank" rel="noopener">💬 Hablar con un Asesor</a>
-        <a href="mailto:ventas@ridefleet.com?subject=Solicitud%20de%20Demo" class="btn btn-primary" id="cta-final-demo">🎯 Solicitar Demo Gratis</a>
+        <a href="mailto:ventas@viago.com?subject=Solicitud%20de%20Demo" class="btn btn-primary" id="cta-final-demo">🎯 Solicitar Demo Gratis</a>
       </div>
     </div>
   </section>
@@ -415,7 +590,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="nav-logo" style="font-size:1.5rem;font-weight:800;"><span class="gradient-text">Ride</span>Fleet</a>
+          <a href="#" class="nav-logo" style="font-size:1.5rem;font-weight:800;"><span class="gradient-text">Via</span>GO</a>
           <p>Tu socio tecnológico para digitalizar tu empresa de taxis. Tecnología de primer nivel, adaptada a tu mercado local.</p>
           <div class="footer-social">
             <a href="#" aria-label="Facebook" target="_blank" rel="noopener">📘</a>
@@ -441,17 +616,61 @@
         <div class="footer-links">
           <h4>Contacto</h4>
           <a href="https://wa.me/51999999999" target="_blank" rel="noopener">WhatsApp de Ventas</a>
-          <a href="mailto:ventas@ridefleet.com">ventas@ridefleet.com</a>
+          <a href="mailto:ventas@viago.com">ventas@viago.com</a>
           <a href="#">Política de privacidad</a>
           <a href="#">Términos y condiciones</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 RideFleet. Todos los derechos reservados.</span>
+        <span>© 2026 ViaGO. Todos los derechos reservados.</span>
         <span>Hecho con 💚 para empresas de transporte</span>
       </div>
     </div>
   </footer>
+
+  <!-- ===== COLOR CUSTOMIZER ===== -->
+  <button class="color-customizer-toggle" id="color-customizer-toggle" aria-label="Personalizar color de marca">🎨</button>
+  <div class="color-customizer-panel" id="color-customizer-panel">
+    <div class="customizer-header">
+      <div class="customizer-header-icon">🎨</div>
+      <div class="customizer-header-text">
+        <h3>Color de marca</h3>
+        <p>Personaliza el color principal</p>
+      </div>
+    </div>
+    <div class="customizer-body">
+      <!-- Color picker principal -->
+      <div class="color-picker-group">
+        <div class="color-picker-label">
+          <span>Color primario</span>
+          <span class="color-hex-value" id="color-hex-display">#FC3441</span>
+        </div>
+        <div class="color-picker-wrapper">
+          <div class="color-swatch-preview" id="color-swatch-preview" style="background-color: #FC3441;"></div>
+          <input type="color" class="color-input-native" id="color-input-native" value="#FC3441">
+          <input type="text" class="color-hex-input" id="color-hex-input" value="#FC3441" placeholder="#FC3441" maxlength="7" spellcheck="false" autocomplete="off">
+        </div>
+      </div>
+
+      <!-- Presets de colores -->
+      <div class="preset-colors">
+        <span class="preset-colors-label">Colores sugeridos</span>
+        <div class="preset-grid" id="preset-grid">
+          <!-- Se llenan dinámicamente por JS -->
+        </div>
+      </div>
+
+      <!-- Preview en vivo -->
+      <div class="live-preview">
+        <span class="live-preview-label">Vista previa</span>
+        <button class="preview-btn-sample">🎯 Solicitar Demo</button>
+        <div class="preview-text-sample">Tu marca, tu color</div>
+      </div>
+    </div>
+    <div class="customizer-footer">
+      <button class="btn-customizer btn-reset-color" id="btn-reset-color">↩ Restablecer rojo</button>
+    </div>
+  </div>
 
   <!-- ===== WHATSAPP FLOTANTE ===== -->
   <a href="https://wa.me/51999999999?text=Hola%2C%20quiero%20información%20sobre%20la%20app%20de%20taxis" class="whatsapp-float" id="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">💬</a>
